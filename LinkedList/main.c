@@ -127,8 +127,22 @@ int main(void){
         printf("error!\n");
     }
 
-    getchar();
-    getchar();
+    Node jead;
+    initList(&jead);
+    addElem(&jead, 23);
+    addElem(&jead, 1);
+    addElem(&jead, 5);
+    addElem(&jead, 3);
+    showList(&newHead);
+    showList(&jead);
+
+    Node pead;
+    initList(&pead);
+    mergeList(&newHead, &jead, &pead);
+    showList(&pead);
+
+    // getchar();
+    // getchar();
 
     return 0;
 }

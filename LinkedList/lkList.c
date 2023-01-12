@@ -29,6 +29,9 @@ myStatus showList(Node *head){
     }
     Node *p;
     p = head->next;
+
+    printf("Show list: ");
+
     while(p != NULL){
         printf("%d ", p->data);
         p = p->next;
@@ -195,19 +198,93 @@ myStatus deleteElem(Node *head, int position, myTYPE e){
     return OK;
 }
 
+// myStatus mergeList(Node *head1, Node *head2, Node *head){
+
+//     Node *p;
+//     Node *q;
+//     Node *r;
+    
+//     q = head;
+    
+//     p = head1->next;
+//     while(p->next != NULL){
+//         r = (myTYPE*)malloc(sizeof(Node));
+//         r->data = p->data;
+//         r->next = NULL;             //create a new node.
+//         q->next = r;                //let q->next point this new node.
+//         q = r;                      //update q. 
+        
+//         p = p->next;
+//     }
+//     r = (myTYPE*)malloc(sizeof(Node));
+//     r->data = p->data;
+//     r->next = NULL;             //create a new node.
+//     q->next = r;                //let q->next point this new node.
+//     q = r;
+
+//     p = head2->next;
+//     while(p->next != NULL){
+//         r = (myTYPE*)malloc(sizeof(Node));
+//         r->data = p->data;
+//         r->next = NULL;             //create a new node.
+//         q->next = r;                //let q->next point this new node.
+//         q = r;                      //update q. 
+        
+//         p = p->next;
+//     }
+    
+//     r = (myTYPE*)malloc(sizeof(Node));
+//     r->data = p->data;
+//     r->next = NULL;             //create a new node.
+//     q->next = r;                //let q->next point this new node.
+//     q = r;
+
+    
+// return OK;
+// }
+
 myStatus mergeList(Node *head1, Node *head2, Node *head){
+
+    if(head1->next == NULL || head2->next == NULL){
+        return ERROR;
+    }
+
 
     Node *p;
     Node *q;
+    Node *r;
     
-
+    q = head;
+    
     p = head1->next;
-    while(p->next != NULL){
+    while(p != NULL){
+        r = (myTYPE*)malloc(sizeof(Node));
+        r->data = p->data;
+        r->next = NULL;             //create a new node.
+        q->next = r;                //let q->next point this new node.
+        q = r;                      //update q. 
+        
         p = p->next;
     }
 
+    p = head2->next;
+    while(p != NULL){
+        r = (myTYPE*)malloc(sizeof(Node));
+        r->data = p->data;
+        r->next = NULL;             //create a new node.
+        q->next = r;                //let q->next point this new node.
+        q = r;                      //update q. 
+        
+        p = p->next;
+    }
     
-
+    
+return OK;
 }
 
-myStatus sortList(Node *head1, Node *head);
+myStatus sortList(Node *head1, Node *head){
+
+    
+
+return OK;
+}
