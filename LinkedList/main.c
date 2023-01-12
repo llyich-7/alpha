@@ -141,6 +141,12 @@ int main(void){
     mergeList(&newHead, &jead, &pead);
     showList(&pead);
 
+    Node qead;
+    initList(&qead);
+    sortList(&pead, &qead);
+
+    showList(&pead);
+
     // getchar();
     // getchar();
 

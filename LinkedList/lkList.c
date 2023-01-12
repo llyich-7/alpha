@@ -282,9 +282,62 @@ myStatus mergeList(Node *head1, Node *head2, Node *head){
 return OK;
 }
 
+// myStatus sortList(Node *head1, Node *head){
+
+//     Node *p;
+//     Node *q;
+//     Node *r;
+
+//     myTYPE reg;
+    
+//     r = head1->next;
+
+//     while(r->next != NULL){
+//         p = head1->next;
+//         q = head1->next->next;
+//         while(q != NULL){
+//             if(p->data < q->data){
+//                 reg = q->data;
+//                 q->data = p->data;
+//                 p->data = reg;
+//             }            
+//             p = p->next;
+//             q = q->next;
+//         }
+//         r = r->next;
+//     }
+
+// return OK;
+// }
+
 myStatus sortList(Node *head1, Node *head){
 
+    Node *p;
+    Node *q;
+    Node *r;
+    Node *x;
+    Node *s;
+
+    myTYPE reg;
     
+    s = head1->next;
+    x = head->next;
+
+    while(r->next != NULL){
+        p = head1->next;
+        
+        while(q->next != NULL){
+            if(p->data < p->next->data){
+                reg = q->data;
+                
+            }else{
+
+            }            
+            p = p->next;
+            q = q->next;
+        }
+        s = s->next;
+    }
 
 return OK;
 }
