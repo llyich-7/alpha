@@ -145,7 +145,7 @@ int main(void){
     initList(&qead);
     sortList(&pead, &qead);
 
-    showList(&pead);
+    showList(&qead);
 
     // getchar();
     // getchar();

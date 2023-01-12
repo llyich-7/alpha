@@ -315,28 +315,38 @@ myStatus sortList(Node *head1, Node *head){
     Node *p;
     Node *q;
     Node *r;
-    Node *x;
-    Node *s;
 
     myTYPE reg;
     
-    s = head1->next;
-    x = head->next;
+    p = head1->next;
+    q = head;
+
+    while(p != NULL){
+        r = (myTYPE*)malloc(sizeof(Node));
+        r->data = p->data;
+        r->next = NULL;
+
+        q->next = r;
+        q = r;
+
+        p = p->next;
+    }
+
+    r = head->next;
 
     while(r->next != NULL){
-        p = head1->next;
-        
-        while(q->next != NULL){
-            if(p->data < p->next->data){
+        p = head->next;
+        q = head->next->next;
+        while(q != NULL){
+            if(p->data < q->data){
                 reg = q->data;
-                
-            }else{
-
+                q->data = p->data;
+                p->data = reg;
             }            
             p = p->next;
             q = q->next;
         }
-        s = s->next;
+        r = r->next;
     }
 
 return OK;
