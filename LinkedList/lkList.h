@@ -25,7 +25,7 @@ myStatus insertElem(Node *head, int position, myTYPE e);
 myStatus deleteElem(Node *head, int position, myTYPE e);
 
 myStatus mergeList(Node *head1, Node *head2, Node *head);
-
+myStatus sort_and_mergeList(Node *head1, Node *head2, Node *head);
 myStatus sortList(Node *head1, Node *head);
 
 

@@ -147,8 +147,6 @@ int main(void){
 
     showList(&qead);
 
-    // getchar();
-    // getchar();
 
     return 0;
 }

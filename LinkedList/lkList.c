@@ -258,9 +258,10 @@ myStatus mergeList(Node *head1, Node *head2, Node *head){
     
     p = head1->next;
     while(p != NULL){
-        r = (myTYPE*)malloc(sizeof(Node));
+        r = (Node*)malloc(sizeof(Node));
         r->data = p->data;
         r->next = NULL;             //create a new node.
+        
         q->next = r;                //let q->next point this new node.
         q = r;                      //update q. 
         
@@ -269,7 +270,7 @@ myStatus mergeList(Node *head1, Node *head2, Node *head){
 
     p = head2->next;
     while(p != NULL){
-        r = (myTYPE*)malloc(sizeof(Node));
+        r = (Node*)malloc(sizeof(Node));
         r->data = p->data;
         r->next = NULL;             //create a new node.
         q->next = r;                //let q->next point this new node.
@@ -322,7 +323,7 @@ myStatus sortList(Node *head1, Node *head){
     q = head;
 
     while(p != NULL){
-        r = (myTYPE*)malloc(sizeof(Node));
+        r = (Node*)malloc(sizeof(Node));
         r->data = p->data;
         r->next = NULL;
 
@@ -350,4 +351,10 @@ myStatus sortList(Node *head1, Node *head){
     }
 
 return OK;
+}
+
+myStatus sort_and_mergeList(Node *head1, Node *head2, Node *head){
+
+
+    
 }
